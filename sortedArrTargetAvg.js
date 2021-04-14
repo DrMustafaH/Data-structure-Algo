@@ -12,17 +12,27 @@ averagePair([], 4) // false;
 */
 
 const averagePair = function (array, average) {
-  if (array.length === 0 || array.length === 1) return false;
-  let x = 0;
-  while (x < array.length) {
-    let cur = array[x];
-    for (let i = x + 1; i < array.length; i++) {
-      const num = array[i];
-      if ((num + cur) / 2 === average) {
-        return true;
-      }
-    }
-    x++;
+  // if (array.length === 0 || array.length === 1) return false;
+  // let x = 0;
+  // while (x < array.length) {
+  //   let cur = array[x];
+  //   for (let i = x + 1; i < array.length; i++) {
+  //     const num = array[i];
+  //     if ((num + cur) / 2 === average) {
+  //       return true;
+  //     }
+  //   }
+  //   x++;
+  // }
+
+  // return false;
+  let start = 0;
+  let end = array.length - 1;
+  while (start < end) {
+    let avg = (array[start] + array[end]) / 2;
+    if (avg === average) return true;
+    else if (avg < average) start++;
+    else end--;
   }
   return false;
 };
