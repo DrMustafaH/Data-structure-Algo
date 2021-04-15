@@ -57,7 +57,7 @@ const removeElement = function (nums, val) {
 
 // TEST
 console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2));
-console.log(removeElement([3, 2, 2, 3], 3));
+// console.log(removeElement([3, 2, 2, 3], 3));
 
 // Leetcode Submit result
 // Runtime => 84 ms
