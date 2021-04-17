@@ -40,6 +40,6 @@ const replaceElements = function (arr) {
 console.log(replaceElements([17, 18, 5, 4, 6, 1]));
 
 // Leetcode Submit result
-// Runtime => 84 ms
-// Memory => 41.4 MB
-// Rank => beat 70.34% of solutions
+// Runtime => 96 ms
+// Memory => 42.3 MB
+// Rank => beat 84.69% of solutions
