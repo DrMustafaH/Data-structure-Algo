@@ -41,7 +41,7 @@ const checkIfExist = function (arr) {
 };
 
 // TEST
-console.log(removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
+console.log(checkIfExist([10, 2, 5, 3]));
 
 // Leetcode Submit result
 // Runtime => 64 ms
