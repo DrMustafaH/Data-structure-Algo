@@ -23,7 +23,7 @@ Input: arr = [0,3,2,1]
 Output: true
 */
 
-var validMountainArray = function (arr) {
+const validMountainArray = function (arr) {
   if (arr.length < 3) {
     return false;
   }
