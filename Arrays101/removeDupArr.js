@@ -34,22 +34,22 @@ Explanation: Your function should return length = 5, with the first five element
 */
 
 const removeDuplicates = function (nums) {
-  // let startIndex = 0;
-  // let endIndex = nums.length - 1;
+  let startIndex = 0;
+  let endIndex = nums.length - 1;
 
-  // while (startIndex < endIndex) {
-  //   if (nums[startIndex] === nums[startIndex + 1]) {
-  //     nums.splice(startIndex, 1);
-  //     endIndex--;
-  //   } else {
-  //     startIndex++;
-  //   }
-  // }
-  // return nums.length;
-  let mySet = new Set(nums);
-  let finalArr = Array.from(mySet);
-  console.log(finalArr);
-  return finalArr.length;
+  while (startIndex < endIndex) {
+    if (nums[startIndex] === nums[startIndex + 1]) {
+      nums.splice(startIndex, 1);
+      endIndex--;
+    } else {
+      startIndex++;
+    }
+  }
+  return nums.length;
+  // let mySet = new Set(nums);
+  // let finalArr = Array.from(mySet);
+  // console.log(finalArr);
+  // return finalArr.length;
 };
 
 // TEST
