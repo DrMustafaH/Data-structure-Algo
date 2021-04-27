@@ -49,7 +49,16 @@ const MyLinkedList = function () {
  * @param {number} index
  * @return {number}
  */
-MyLinkedList.prototype.get = function (index) {};
+MyLinkedList.prototype.get = function (index) {
+  if (this.size === 0 || index < 0 || index >= this.size) return -1;
+
+  let node = this.head;
+  while (index > 0) {
+    node = node.next;
+    index--;
+  }
+  return node.val;
+};
 
 /**
  * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
