@@ -49,7 +49,7 @@ const isValid = function (s) {
       } else return false;
     }
   }
-  return arr.length === 0 ? true : false;
+  return arr.length === 0;
 };
 
 // TEST
