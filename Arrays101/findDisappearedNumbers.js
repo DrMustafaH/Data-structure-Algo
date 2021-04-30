@@ -14,7 +14,9 @@ Output: [2]
 */
 
 const findDisappearedNumbers = function (nums) {
-  ///// BRUTE FORCE SOLUTION//////
+  //////////////////////////////////
+  ///// BRUTE FORCE SOLUTION////////
+  //////////////////////////////////
 
   // const mySet = new Set(nums);
   // const noDupArr = Array.from(mySet);
@@ -23,7 +25,9 @@ const findDisappearedNumbers = function (nums) {
   // const result = newArr.filter((num) => !sortedArr.includes(num));
   // return result.slice(1);
 
+  //////////////////////////////////
   /////// OPTOMIZED SOLUTION ///////
+  //////////////////////////////////
 
   let stack = [];
   for (let i = 0; i < nums.length; i++) {
