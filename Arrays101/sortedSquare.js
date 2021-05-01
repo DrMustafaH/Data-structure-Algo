@@ -33,6 +33,6 @@ console.log(sortedSquares([-4, -1, 0, 3, 10]));
 console.log(sortedSquares([-7, -3, 2, 3, 11]));
 
 // Leetcode Submit result
-// Runtime => 108 ms
-// Memory => 49.4 MB
-// Rank => beat 91.83% of solutions
+// Runtime => 124 ms
+// Memory => 44.9 MB
+// Rank => beat 49.57% of solutions
