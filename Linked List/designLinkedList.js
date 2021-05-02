@@ -97,6 +97,19 @@ MyLinkedList.prototype.addAtTail = function (val) {
  * @return {void}
  */
 MyLinkedList.prototype.addAtIndex = function (index, val) {};
+if (index > this.size) return;
+if (index === this.size) return this.addAtTail(val);
+if (index <= 0) return this.addAtHead(val);
+
+let node = new Node(val);
+let preNode = this.head;
+while (index > 1) {
+  preNode = preNode.next;
+  index--;
+}
+node.next = preNode.next;
+preNode.next = node;
+this.size++;
 
 /**
  * Delete the index-th node in the linked list, if the index is valid.
