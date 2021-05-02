@@ -96,27 +96,41 @@ MyLinkedList.prototype.addAtTail = function (val) {
  * @param {number} val
  * @return {void}
  */
-MyLinkedList.prototype.addAtIndex = function (index, val) {};
-if (index > this.size) return;
-if (index === this.size) return this.addAtTail(val);
-if (index <= 0) return this.addAtHead(val);
+MyLinkedList.prototype.addAtIndex = function (index, val) {
+  if (index > this.size) return;
+  if (index === this.size) return this.addAtTail(val);
+  if (index <= 0) return this.addAtHead(val);
 
-let node = new Node(val);
-let preNode = this.head;
-while (index > 1) {
-  preNode = preNode.next;
-  index--;
-}
-node.next = preNode.next;
-preNode.next = node;
-this.size++;
+  let node = new Node(val);
+  let preNode = this.head;
+  while (index > 1) {
+    preNode = preNode.next;
+    index--;
+  }
+  node.next = preNode.next;
+  preNode.next = node;
+  this.size++;
+};
 
 /**
  * Delete the index-th node in the linked list, if the index is valid.
  * @param {number} index
  * @return {void}
  */
-MyLinkedList.prototype.deleteAtIndex = function (index) {};
+MyLinkedList.prototype.deleteAtIndex = function (index) {
+  if (index >= this.size || index < 0) return;
+  if (index === 0) this.head = this.head.next;
+  else {
+    let preNode = this.head;
+    while (index > 1) {
+      preNode = preNode.next;
+      index--;
+    }
+    preNode.next = preNode.next.next ? preNode.next.next : null;
+    if (!preNode.next) this.tail = preNode;
+  }
+  this.size--;
+};
 
 /**
  * Your MyLinkedList object will be instantiated and called as such:
