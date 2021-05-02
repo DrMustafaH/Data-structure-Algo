@@ -141,3 +141,8 @@ MyLinkedList.prototype.deleteAtIndex = function (index) {
  * obj.addAtIndex(index,val)
  * obj.deleteAtIndex(index)
  */
+
+// Leetcode Submit result
+// Runtime => 120 ms
+// Memory => 45.9 MB
+// Rank => beat 98.96% of solutions
